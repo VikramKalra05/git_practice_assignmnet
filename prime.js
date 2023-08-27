@@ -1,16 +1,15 @@
-// Check whether number is prime or not
+let num = 17;
+let factors = false;
 
-let num = 10;
-let factors = 0;
-
-for(let i=0; i<=num; i++){
-    if(num%i==0){
-        factors++;
+for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+        factors = true;
+        break; 
     }
 }
 
-if(factors=2){
-    console.log("prime")
-}else{
-    console.log("not prime");
+if (factors) {
+    console.log("Not prime");
+} else {
+    console.log("Prime");
 }
