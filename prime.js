@@ -1,15 +1,22 @@
-let num = 17;
-let factors = false;
-
-for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-        factors = true;
-        break; 
+function isPrime(number) {
+    if (number <= 1) {
+        return false;  
     }
+
+  
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false; 
+        }
+    }
+
+    return true; 
 }
 
-if (factors) {
-    console.log("Not prime");
+const num = 17;
+
+if (isPrime(num)) {
+    console.log(num + " is prime.");
 } else {
-    console.log("Prime");
+    console.log(num + " is not prime.");
 }
